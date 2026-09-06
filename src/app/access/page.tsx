@@ -111,7 +111,8 @@ export default function AccessPage() {
             </dl>
             <dl>
               <dt>最寄駅</dt>
-              <dd>丸ノ内線・大江戸線「本郷三丁目駅」下車 徒歩3分</dd>
+              <dd>丸ノ内線・大江戸線「本郷三丁目駅」下車 徒歩3分<br />
+                千代田線「湯島駅」下車 徒歩5分</dd>
             </dl>
           </div>
         </section>
