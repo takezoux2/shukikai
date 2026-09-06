@@ -40,6 +40,13 @@ describe("All Subpages", () => {
     expect(
       screen.getByRole("heading", { name: "入会案内" }),
     ).toBeInTheDocument();
+    const contactLinks = screen.getAllByRole("link", {
+      name: /見学、入会申し込みは問い合わせから/,
+    });
+    expect(contactLinks).toHaveLength(2);
+    contactLinks.forEach((link) => {
+      expect(link).toHaveAttribute("href", "/contact");
+    });
   });
 
   it("renders AccessPage", () => {

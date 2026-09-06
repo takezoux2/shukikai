@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "入会案内｜文京区 空手 空手道脩己会 総本部道場",
@@ -27,6 +28,17 @@ export default function InfoPage() {
       <div id="content">
         <section>
           <div className="gridContainer">
+            <div className="nyukaiLeadBox">
+              <p className="nyukaiLeadText">
+                見学・体験レッスン、入会のお申し込みは随時受け付けております。
+              </p>
+              <div className="nyukaiLeadBtnWrap">
+                <Link href="/contact" className="nyukaiLeadBtn">
+                  見学、入会申し込みは問い合わせから &gt;
+                </Link>
+              </div>
+            </div>
+
             <h3>入会諸費用・参加可能クラス</h3>
             <table className="desktop_only">
               <thead>
@@ -194,6 +206,17 @@ export default function InfoPage() {
                   shuki-karate@outlook.jp
                 </a>
               </p>
+            </div>
+
+            <div className="nyukaiLeadBox nyukaiBottomBox">
+              <p className="nyukaiLeadText">
+                見学・体験レッスン、入会のお申し込みは随時受け付けております。
+              </p>
+              <div className="nyukaiLeadBtnWrap">
+                <Link href="/contact" className="nyukaiLeadBtn">
+                  見学、入会申し込みは問い合わせから &gt;
+                </Link>
+              </div>
             </div>
           </div>
         </section>
