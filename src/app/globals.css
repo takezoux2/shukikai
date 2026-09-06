@@ -248,7 +248,8 @@ section {
 
 /* Subpage header & background styles */
 .sub #mv {
-  background: #0c4aaf url(/img/pc/page_title_bg.png) no-repeat top center;
+  background: #0c4aaf url(/shukikai/img/pc/page_title_bg.png) no-repeat top
+    center;
   height: 65px;
 }
 .sub #mv h2 {
@@ -261,31 +262,31 @@ section {
 }
 
 .sub #content {
-  background: url(/img/pc/contet_bg.png) no-repeat top center;
+  background: url(/shukikai/img/pc/contet_bg.png) no-repeat top center;
 }
 .sub.message #content {
-  background: url(/img/pc/message_bg.png) no-repeat top center;
+  background: url(/shukikai/img/pc/message_bg.png) no-repeat top center;
 }
 .sub.class #content {
-  background: url(/img/pc/class_bg.png) no-repeat top center;
+  background: url(/shukikai/img/pc/class_bg.png) no-repeat top center;
 }
 .sub.nyukai #content {
-  background: url(/img/pc/info_bg.png) no-repeat top center;
+  background: url(/shukikai/img/pc/info_bg.png) no-repeat top center;
 }
 .sub.contact #content {
-  background: url(/img/pc/contact_bg.png) no-repeat top center;
+  background: url(/shukikai/img/pc/contact_bg.png) no-repeat top center;
 }
 .sub.branch #content {
-  background: url(/img/pc/branch_bg.png) no-repeat top center;
+  background: url(/shukikai/img/pc/branch_bg.png) no-repeat top center;
 }
 .sub.access #content {
-  background: url(/img/pc/access_bg.png) no-repeat top center;
+  background: url(/shukikai/img/pc/access_bg.png) no-repeat top center;
 }
 .sub.qa #content {
-  background: url(/img/pc/qa_bg.png) no-repeat top center;
+  background: url(/shukikai/img/pc/qa_bg.png) no-repeat top center;
 }
 .sub.sch #content {
-  background: url(/img/pc/schedule_bg.png) no-repeat top center;
+  background: url(/shukikai/img/pc/schedule_bg.png) no-repeat top center;
 }
 .sub.pvp #content {
   background: none;
@@ -643,7 +644,7 @@ td.select_area select {
 /* よくあるご質問 & プライバシーポリシー */
 .qa h3,
 .pvp h3 {
-  background: url(/img/pc/pvp_h3_bg.png) no-repeat left bottom;
+  background: url(/shukikai/img/pc/pvp_h3_bg.png) no-repeat left bottom;
   font-size: 200%;
   padding-bottom: 10px;
   font-weight: normal;
@@ -749,7 +750,7 @@ td.select_area select {
     font-size: 80%;
   }
   .accordion-panel li a {
-    background: url(/img/sp/menu_li.png) no-repeat left center;
+    background: url(/shukikai/img/sp/menu_li.png) no-repeat left center;
     padding-left: 1.2em;
     text-decoration: none;
     font-weight: bold;
@@ -757,7 +758,7 @@ td.select_area select {
     display: block;
   }
   .accordion-panel li.square a {
-    background: url(/img/pc/header_li.png) no-repeat left center;
+    background: url(/shukikai/img/pc/header_li.png) no-repeat left center;
   }
 
   .gridContainer {
@@ -1063,7 +1064,7 @@ td.select_area select {
   }
   #header_inner li {
     list-style: none;
-    background: url(/img/pc/header_li.png) no-repeat left center;
+    background: url(/shukikai/img/pc/header_li.png) no-repeat left center;
     float: left;
     margin-left: 20px;
     height: 40px;
@@ -1078,7 +1079,7 @@ td.select_area select {
   }
   #header_inner li a:hover,
   #header_inner li a.active {
-    background: url(/img/pc/nav_hover.png) no-repeat top center;
+    background: url(/shukikai/img/pc/nav_hover.png) no-repeat top center;
     color: #0c4aaf;
   }
   #header_inner .fR .fR a img {
@@ -1104,7 +1105,7 @@ td.select_area select {
   }
   nav#desktop li:hover,
   nav#desktop li a.active {
-    background: url(/img/pc/nav_hover.png) no-repeat top center;
+    background: url(/shukikai/img/pc/nav_hover.png) no-repeat top center;
     color: #0c4aaf;
   }
   #sns_button {
@@ -1115,7 +1116,7 @@ td.select_area select {
 
   /* Main Visual Top Desktop */
   .top #mv {
-    background: url(/img/pc/mv.png) no-repeat top center;
+    background: url(/shukikai/img/pc/mv.png) no-repeat top center;
     min-height: 550px;
     margin-bottom: 90px;
   }
@@ -1170,7 +1171,7 @@ td.select_area select {
 
   /* 会長挨拶 Desktop */
   section.kaicyou .gridContainer {
-    background: url(/img/pc/kaicyou.png) no-repeat center right;
+    background: url(/shukikai/img/pc/kaicyou.png) no-repeat center right;
     min-height: 590px;
   }
   section.kaicyou p.name {
@@ -1211,7 +1212,7 @@ td.select_area select {
     list-style: none;
     float: left;
     margin-right: 50px;
-    background: url(/img/pc/class_nav.png) no-repeat left center;
+    background: url(/shukikai/img/pc/class_nav.png) no-repeat left center;
   }
   #class_nav ul li:last-child {
     margin-right: 0;
@@ -1229,7 +1230,7 @@ td.select_area select {
     text-decoration: none;
   }
   h2.class_title:before {
-    content: url(/img/pc/title_logo.png);
+    content: url(/shukikai/img/pc/title_logo.png);
     width: 50px;
     position: relative;
     top: 15px;
@@ -1353,7 +1354,7 @@ td.select_area select {
     text-align: right;
   }
   .footer_nav {
-    background: url(/img/pc/footer_logo.png) no-repeat top left;
+    background: url(/shukikai/img/pc/footer_logo.png) no-repeat top left;
     margin-top: 40px;
   }
   .footer_nav ul {

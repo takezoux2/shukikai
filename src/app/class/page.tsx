@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { getAssetPath } from "@/lib/basePath";
 
 export const metadata: Metadata = {
   title: "クラス紹介｜文京区 空手 空手道脩己会 総本部道場",
@@ -50,7 +51,10 @@ export default function ClassPage() {
         <section id="kids" className="class_2">
           <div className="gridContainer">
             <h2 className="class_title">キッズ空手クラス</h2>
-            <img src="/img/pc/class_photo01.png" alt="キッズ空手クラス" />
+            <img
+              src={getAssetPath("/img/pc/class_photo01.png")}
+              alt="キッズ空手クラス"
+            />
 
             <div className="clearfix last">
               <div className="fL">
@@ -132,7 +136,10 @@ export default function ClassPage() {
         <section id="standard" className="class_3">
           <div className="gridContainer">
             <h2 className="class_title">一般クラス</h2>
-            <img src="/img/pc/class_photo02.png" alt="一般クラス" />
+            <img
+              src={getAssetPath("/img/pc/class_photo02.png")}
+              alt="一般クラス"
+            />
 
             <h3>武道に触れよう</h3>
             <p>
@@ -178,7 +185,10 @@ export default function ClassPage() {
         <section id="ladies" className="class_2">
           <div className="gridContainer">
             <h2 className="class_title">レディスキッククラス</h2>
-            <img src="/img/pc/class_photo03.png" alt="レディスキッククラス" />
+            <img
+              src={getAssetPath("/img/pc/class_photo03.png")}
+              alt="レディスキッククラス"
+            />
 
             <h3>パンチ キック でストレス発散！</h3>
             <p>
@@ -204,7 +214,10 @@ export default function ClassPage() {
           <div className="gridContainer">
             <h2 className="class_title">ヨガクラス（中学生以上）</h2>
             <div className="txtC">
-              <img src="/img/pc/class_photo04.png" alt="ヨガクラス" />
+              <img
+                src={getAssetPath("/img/pc/class_photo04.png")}
+                alt="ヨガクラス"
+              />
             </div>
 
             <h3>体質改善・ボディメイク・リラックス効果</h3>

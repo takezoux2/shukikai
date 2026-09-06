@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getAssetPath } from "@/lib/basePath";
 
 export const metadata: Metadata = {
   title: "スケジュール ｜文京区 空手 空手道脩己会 総本部道場",
@@ -46,7 +47,7 @@ export default function SchedulePage() {
 
             <p className="button size03">
               <a
-                href="/class2020.pdf"
+                href={getAssetPath("/class2020.pdf")}
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { getAssetPath } from "@/lib/basePath";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     "本郷三丁目",
   ],
   icons: {
-    icon: "/favicon.ico",
+    icon: getAssetPath("/favicon.ico"),
   },
 };
 

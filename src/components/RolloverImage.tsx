@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { getAssetPath } from "@/lib/basePath";
 
 interface RolloverImageProps {
   src: string;
@@ -24,10 +25,11 @@ export default function RolloverImage({
   const [isHovered, setIsHovered] = useState(false);
 
   const getActiveSrc = () => {
+    let targetSrc = src;
     if ((isHovered || active) && src.includes("_off.")) {
-      return src.replace("_off.", "_on.");
+      targetSrc = src.replace("_off.", "_on.");
     }
-    return src;
+    return getAssetPath(targetSrc);
   };
 
   return (

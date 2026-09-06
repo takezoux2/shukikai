@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getAssetPath } from "@/lib/basePath";
 
 export const metadata: Metadata = {
   title: "施設紹介・アクセス｜文京区 空手 空手道脩己会 総本部道場",
@@ -31,14 +32,14 @@ export default function AccessPage() {
             <div className="clearfix">
               <div className="fL">
                 <img
-                  src="/img/pc/access_photo01.png"
+                  src={getAssetPath("/img/pc/access_photo01.png")}
                   alt="清潔感のある広々とした道場"
                 />
                 <p>清潔感のある広々とした道場</p>
               </div>
               <div className="fR">
                 <img
-                  src="/img/pc/access_photo02.png"
+                  src={getAssetPath("/img/pc/access_photo02.png")}
                   alt="男女更衣室完備と設備も充実"
                 />
                 <p>男女更衣室完備と設備も充実</p>
@@ -47,14 +48,14 @@ export default function AccessPage() {
             <div className="clearfix">
               <div className="fL">
                 <img
-                  src="/img/pc/access_photo03.png"
+                  src={getAssetPath("/img/pc/access_photo03.png")}
                   alt="サンドバック3機と巻き藁"
                 />
                 <p>サンドバック3機と巻き藁</p>
               </div>
               <div className="fR">
                 <img
-                  src="/img/pc/access_photo04.png"
+                  src={getAssetPath("/img/pc/access_photo04.png")}
                   alt="本格仕様のウェイト器具も完備"
                 />
                 <p>本格仕様のウェイト器具も完備</p>
@@ -63,14 +64,14 @@ export default function AccessPage() {
             <div className="clearfix mbn">
               <div className="fL">
                 <img
-                  src="/img/pc/access_photo05.png"
+                  src={getAssetPath("/img/pc/access_photo05.png")}
                   alt="道場ビル外観（２F）"
                 />
                 <p>道場ビル外観（２F）</p>
               </div>
               <div className="fR">
                 <img
-                  src="/img/pc/access_photo06.png"
+                  src={getAssetPath("/img/pc/access_photo06.png")}
                   alt="ビル入り口から２Fへ"
                 />
                 <p>ビル入り口から２Fへ</p>
@@ -82,7 +83,7 @@ export default function AccessPage() {
         <section className="map">
           <div className="gridContainer clearfix">
             <h3>アクセス</h3>
-            <img src="/img/pc/map.png" alt="地図" />
+            <img src={getAssetPath("/img/pc/map.png")} alt="地図" />
 
             <dl>
               <dt className="bt">所在地</dt>

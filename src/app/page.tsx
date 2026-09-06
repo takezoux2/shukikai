@@ -1,5 +1,6 @@
 import Link from "next/link";
 import RolloverImage from "@/components/RolloverImage";
+import { getAssetPath } from "@/lib/basePath";
 
 export default function HomePage() {
   return (
@@ -7,7 +8,11 @@ export default function HomePage() {
       {/* Main Visual */}
       <div id="mv">
         <div className="mobile_only">
-          <img src="/img/sp/mv.png" alt="脩己会" className="mb60" />
+          <img
+            src={getAssetPath("/img/sp/mv.png")}
+            alt="脩己会"
+            className="mb60"
+          />
         </div>
         <div className="gridContainer clearfix">
           <div className="fL">
@@ -75,7 +80,7 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src="/img/sp/fb.png" alt="facebook" />
+                  <img src={getAssetPath("/img/sp/fb.png")} alt="facebook" />
                 </a>
                 <br />
                 <a
@@ -83,7 +88,10 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src="/img/sp/blog1.png" alt="本部道場 ブログ" />
+                  <img
+                    src={getAssetPath("/img/sp/blog1.png")}
+                    alt="本部道場 ブログ"
+                  />
                 </a>
                 <br />
                 <a
@@ -91,7 +99,10 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src="/img/sp/blog2.png" alt="YMCA道場 ブログ" />
+                  <img
+                    src={getAssetPath("/img/sp/blog2.png")}
+                    alt="YMCA道場 ブログ"
+                  />
                 </a>
                 <br />
                 <a
@@ -99,7 +110,10 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src="/img/sp/blog3.png" alt="ヨガ ブログ" />
+                  <img
+                    src={getAssetPath("/img/sp/blog3.png")}
+                    alt="ヨガ ブログ"
+                  />
                 </a>
               </div>
             </div>
@@ -128,7 +142,7 @@ export default function HomePage() {
               </p>
               <div className="mobile_only txtC">
                 <img
-                  src="/img/pc/photo01.png"
+                  src={getAssetPath("/img/pc/photo01.png")}
                   alt="当たり前だけど、大切なこと"
                   className="img80"
                 />
@@ -138,7 +152,10 @@ export default function HomePage() {
               </p>
             </div>
             <div className="fR desktop_only">
-              <img src="/img/pc/photo01.png" alt="当たり前だけど、大切なこと" />
+              <img
+                src={getAssetPath("/img/pc/photo01.png")}
+                alt="当たり前だけど、大切なこと"
+              />
             </div>
           </div>
         </section>
@@ -146,7 +163,10 @@ export default function HomePage() {
         <section className="section2">
           <div className="gridContainer clearfix">
             <div className="fL desktop_only">
-              <img src="/img/pc/photo02.png" alt="武道に触れよう" />
+              <img
+                src={getAssetPath("/img/pc/photo02.png")}
+                alt="武道に触れよう"
+              />
             </div>
             <div className="fR">
               <h2>武道に触れよう</h2>
@@ -160,7 +180,7 @@ export default function HomePage() {
               </p>
               <div className="mobile_only txtC">
                 <img
-                  src="/img/pc/photo02.png"
+                  src={getAssetPath("/img/pc/photo02.png")}
                   alt="武道に触れよう"
                   className="img80"
                 />
@@ -190,7 +210,7 @@ export default function HomePage() {
               </p>
               <div className="mobile_only">
                 <img
-                  src="/img/pc/photo03.png"
+                  src={getAssetPath("/img/pc/photo03.png")}
                   alt="体力に自信がなくても大丈夫"
                   className="img80"
                 />
@@ -200,7 +220,10 @@ export default function HomePage() {
               </p>
             </div>
             <div className="fL desktop_only">
-              <img src="/img/pc/photo03.png" alt="体力に自信がなくても大丈夫" />
+              <img
+                src={getAssetPath("/img/pc/photo03.png")}
+                alt="体力に自信がなくても大丈夫"
+              />
             </div>
           </div>
         </section>
@@ -208,7 +231,7 @@ export default function HomePage() {
         <section className="txtC section4">
           <div className="gridContainer clearfix">
             <img
-              src="/img/pc/content_logo.png"
+              src={getAssetPath("/img/pc/content_logo.png")}
               alt="空手道 脩己会"
               className="img50"
             />

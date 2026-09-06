@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { getAssetPath } from "@/lib/basePath";
 import RolloverImage from "./RolloverImage";
 
 export default function Footer() {
@@ -23,7 +24,10 @@ export default function Footer() {
               cursor: "pointer",
             }}
           >
-            <img src="/img/pc/page_top.png" alt="ページトップへ" />
+            <img
+              src={getAssetPath("/img/pc/page_top.png")}
+              alt="ページトップへ"
+            />
           </button>
         </div>
       </div>
@@ -199,7 +203,10 @@ export default function Footer() {
         {/* Mobile Navigation */}
         <div className="footer_nav clearfix mobile_only">
           <div className="txtC">
-            <img src="/img/pc/footer_logo.png" alt="空手道 脩己會" />
+            <img
+              src={getAssetPath("/img/pc/footer_logo.png")}
+              alt="空手道 脩己會"
+            />
           </div>
           <ul className="clearfix">
             <li>

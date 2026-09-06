@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { getAssetPath } from "@/lib/basePath";
 import RolloverImage from "./RolloverImage";
 
 export default function Header() {
@@ -24,7 +25,10 @@ export default function Header() {
         <div id="header_inner" className="clearfix">
           <div className="fL">
             <Link href="/">
-              <img src="/img/pc/header_logo.png" alt="空手道 脩己會" />
+              <img
+                src={getAssetPath("/img/pc/header_logo.png")}
+                alt="空手道 脩己會"
+              />
             </Link>
           </div>
           <div className="fR">
@@ -74,9 +78,9 @@ export default function Header() {
               }}
             >
               <img
-                src={
-                  isMenuOpen ? "/img/sp/menu_on.png" : "/img/sp/menu_off.png"
-                }
+                src={getAssetPath(
+                  isMenuOpen ? "/img/sp/menu_on.png" : "/img/sp/menu_off.png",
+                )}
                 alt="MENU"
               />
             </button>
@@ -127,7 +131,7 @@ export default function Header() {
                 <div className="txtC mb30">
                   <Link href="/contact" onClick={closeMenu}>
                     <img
-                      src="/img/sp/contact.png"
+                      src={getAssetPath("/img/sp/contact.png")}
                       alt="お問い合わせ"
                       className="img80"
                     />

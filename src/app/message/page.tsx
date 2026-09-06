@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getAssetPath } from "@/lib/basePath";
 
 export const metadata: Metadata = {
   title: "会長挨拶｜文京区 空手 空手道脩己会 総本部道場",
@@ -28,7 +29,11 @@ export default function MessagePage() {
         <section className="kaicyou">
           <div className="gridContainer">
             <div className="mobile_only txtC mb60">
-              <img src="/img/sp/message.png" alt="会長" className="img80" />
+              <img
+                src={getAssetPath("/img/sp/message.png")}
+                alt="会長"
+                className="img80"
+              />
             </div>
             <p className="name">
               <ruby>
