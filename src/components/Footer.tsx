@@ -5,30 +5,27 @@ import { getAssetPath } from "@/lib/basePath";
 import RolloverImage from "./RolloverImage";
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <footer>
       <div className="gridContainer pagetop">
         <div className="footerTop">
-          <button
-            type="button"
-            onClick={scrollToTop}
-            aria-label="ページトップへ"
-            style={{
-              background: "none",
-              border: "none",
-              padding: 0,
-              cursor: "pointer",
-            }}
-          >
-            <img
-              src={getAssetPath("/img/pc/page_top.png")}
-              alt="ページトップへ"
-            />
-          </button>
+          <Link href="/info" className="btnJoinFloating" aria-label="入会案内">
+            <span className="btnJoinText">入会案内</span>
+            <svg
+              className="btnJoinIcon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </Link>
         </div>
       </div>
 

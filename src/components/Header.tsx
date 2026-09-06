@@ -107,11 +107,6 @@ export default function Header() {
                       クラス紹介
                     </Link>
                   </li>
-                  <li>
-                    <Link href="/info" onClick={closeMenu}>
-                      入会案内
-                    </Link>
-                  </li>
                   <li className="small">
                     <Link href="/access" onClick={closeMenu}>
                       施設紹介・アクセス
@@ -179,11 +174,6 @@ export default function Header() {
                 className={isActive("/class") ? "active" : ""}
               >
                 クラス紹介
-              </Link>
-            </li>
-            <li>
-              <Link href="/info" className={isActive("/info") ? "active" : ""}>
-                入会案内
               </Link>
             </li>
             <li>

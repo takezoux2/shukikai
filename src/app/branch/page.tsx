@@ -19,12 +19,15 @@ interface Branch {
   id: string;
   region: "関東地区" | "関西地区" | "東北地区" | "九州地区";
   name: string;
-  leader: string;
+  leader?: string;
   postalCode?: string;
   address?: string | string[];
   tel?: string;
+  phone?: string;
   schedules?: string[];
   notes?: string;
+  websiteUrl?: string;
+  url?: string;
 }
 
 const branches: Branch[] = [
@@ -94,10 +97,10 @@ const branches: Branch[] = [
   {
     id: "seishinkan",
     region: "関西地区",
-    name: "兵庫県本部　誠心館",
+    name: "兵庫県本部　硯武館",
     leader: "館長　巴山　猛",
-    address: "兵庫県尼崎市七松町2-6-6",
-    tel: "090-3263-3344",
+    address: "尼崎市南塚口町8丁目7−25",
+    websiteUrl: "https://www.karate-kenbukan.com/",
   },
 
   // 東北地区
@@ -121,6 +124,9 @@ const branches: Branch[] = [
 ];
 
 function BranchBox({ branch }: { branch: Branch }) {
+  const websiteUrl = branch.websiteUrl || branch.url;
+  const tel = branch.tel || branch.phone;
+
   return (
     <div className="txtBox">
       <h4>{branch.name}</h4>
@@ -141,11 +147,18 @@ function BranchBox({ branch }: { branch: Branch }) {
         typeof branch.address === "string" && <p>{branch.address}</p>}
       {Array.isArray(branch.address) &&
         branch.address.map((addr) => <p key={addr}>{addr}</p>)}
-      {branch.tel && <p>{branch.tel}</p>}
+      {tel && <p>{tel}</p>}
       {branch.schedules?.map((schedule) => (
         <p key={schedule}>{schedule}</p>
       ))}
       {branch.notes && <p>{branch.notes}</p>}
+      {websiteUrl && (
+        <p>
+          <a href={websiteUrl} target="_blank" rel="noopener noreferrer">
+            Webページ
+          </a>
+        </p>
+      )}
     </div>
   );
 }

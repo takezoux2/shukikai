@@ -73,6 +73,10 @@ describe("All Subpages", () => {
     expect(
       screen.getByRole("heading", { name: /鹿児島川内クラブ/ }),
     ).toBeInTheDocument();
+    // websiteUrlが設定されている支部のWebページリンクが存在することを検証
+    const webLink = screen.getByRole("link", { name: "Webページ" });
+    expect(webLink).toBeInTheDocument();
+    expect(webLink).toHaveAttribute("href", "https://www.karate-kenbukan.com/");
   });
 
   it("renders QaPage", () => {
