@@ -1,25 +1,41 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import JsonLd from "@/components/JsonLd";
 import { getAssetPath } from "@/lib/basePath";
+import { getBreadcrumbJsonLd, getCoursesJsonLd } from "@/lib/jsonLd";
 
 export const metadata: Metadata = {
-  title: "クラス紹介｜文京区 空手 空手道脩己会 総本部道場",
+  title: "クラス紹介",
   description:
-    "クラス紹介のページです。3歳からの礼儀作法、武道の心。空手道脩己会総本部道場。",
+    "空手道脩己会総本部道場のクラス案内。3歳からの「キッズ空手クラス（幼年・入門クラス／少年クラス）」および中学生以上の「一般クラス（武道空手・キッククラス）」、「健康空手クラス」。礼儀作法から護身術、本格的な武道空手まで。",
   keywords: [
-    "文京区 空手",
-    "東京都 空手",
-    "文京区 キックボクシング",
     "キッズ空手",
-    "脩己会",
-    "修己会",
-    "クラス紹介",
+    "子供 空手 文京区",
+    "一般空手",
+    "大人の空手 初心者",
+    "キックボクシング 文京区",
+    "護身術",
+    "脩己会 クラス",
   ],
+  alternates: {
+    canonical: "/class",
+  },
+  openGraph: {
+    title: "クラス紹介｜空手道脩己会 総本部道場",
+    description:
+      "3歳からのキッズ空手、一般クラス（武道空手・キッククラス）、健康空手。初心者から経験者まで目的に合わせた充実のクラス内容。",
+  },
 };
 
 export default function ClassPage() {
+  const breadcrumb = getBreadcrumbJsonLd([
+    { name: "クラス紹介", path: "/class" },
+  ]);
+  const coursesSchema = getCoursesJsonLd();
+
   return (
     <div className="sub class">
+      <JsonLd data={[breadcrumb, coursesSchema]} />
       <div id="mv">
         <div className="gridContainer clearfix">
           <h2>クラス紹介</h2>

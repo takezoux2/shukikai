@@ -1,24 +1,37 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import JsonLd from "@/components/JsonLd";
+import { getBreadcrumbJsonLd, getCoursesJsonLd } from "@/lib/jsonLd";
 
 export const metadata: Metadata = {
-  title: "入会案内｜文京区 空手 空手道脩己会 総本部道場",
+  title: "入会案内・月会費",
   description:
-    "入会案内のページです。3歳からの礼儀作法、武道の心。空手道脩己会総本部道場。",
+    "空手道脩己会総本部道場の入会案内・月会費・諸費用。キッズ会員（3歳〜小6: 月会費8,800円）、中学生会員（月会費8,800円）、一般会員（高校生以上: 月会費11,000円）。入会金11,000円。ファミリー割引（2人目以降1,000円引）あり。見学・無料体験随時受付中。",
   keywords: [
-    "文京区 空手",
-    "東京都 空手",
-    "文京区 キックボクシング",
-    "キッズ空手",
-    "脩己会",
-    "修己会",
-    "入会案内",
+    "空手 月謝",
+    "空手 入会金",
+    "文京区 空手 費用",
+    "キッズ空手 月会費",
+    "空手道場 料金",
+    "脩己会 入会",
   ],
+  alternates: {
+    canonical: "/info",
+  },
+  openGraph: {
+    title: "入会案内・月会費｜空手道脩己会 総本部道場",
+    description:
+      "入会金11,000円、キッズ・中学生月会費8,800円、一般11,000円。週何回でも参加可能。ファミリー割引あり。見学・無料体験受付中。",
+  },
 };
 
 export default function InfoPage() {
+  const breadcrumb = getBreadcrumbJsonLd([{ name: "入会案内", path: "/info" }]);
+  const coursesSchema = getCoursesJsonLd();
+
   return (
     <div className="sub nyukai">
+      <JsonLd data={[breadcrumb, coursesSchema]} />
       <div id="mv">
         <div className="gridContainer clearfix">
           <h2>入会案内</h2>

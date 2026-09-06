@@ -1,0 +1,34 @@
+# 空手道 脩己会（しゅうきかい）総本部道場
+
+> 文京区本郷の空手道場「空手道 脩己会（しゅうきかい）総本部道場」。3歳からのキッズ空手、一般クラス（武道空手・キッククラス）、健康空手など、初心者から本格的な武道まで丁寧に指導。
+
+## 概要と理念
+- **団体名**: 空手道 脩己会（日本空手道 脩己會 総本部道場 / Shukikai Karate）
+- **会長・首席師範**: 林 正秀（七段）
+- **理念**: 「武硯脩己」「只管打拳」「良い習慣は才能を超える」
+- **特徴**: 礼節と感謝の心を育む指導。無理な体力任せではなく、理にかなった身体動作「理術」を重視。初心者や子ども、シニアまで安心して学べます。
+
+## 基本情報・アクセス
+- **所在地**: 〒113-0033 東京都文京区本郷3-43-4 シモムラビル2F
+- **最寄駅**: 
+  - 東京メトロ丸ノ内線・都営大江戸線「本郷三丁目駅」徒歩3分
+  - 東京メトロ千代田線「湯島駅」徒歩5分
+- **電話番号**: 03-3813-7779
+- **FAX**: 03-3813-1610
+- **Email**: shuki-karate@outlook.jp
+- **見学・体験**: 無料（随時受付中）
+
+## 主要ページ案内
+- [トップページ](https://takezoux2.github.io/shukikai/): 道場の特徴と最新情報
+- [クラス紹介](https://takezoux2.github.io/shukikai/class): キッズ空手クラス（幼年・入門、少年）および一般クラス（武道空手、キッククラス）の詳細
+- [入会案内・料金](https://takezoux2.github.io/shukikai/info): 入会金（11,000円）、月会費（キッズ・中学生 8,800円、一般 11,000円）、空手衣代、手続き案内
+- [スケジュール](https://takezoux2.github.io/shukikai/schedule): 各クラスの稽古曜日・時間帯
+- [施設紹介・アクセス](https://takezoux2.github.io/shukikai/access): 本部道場設備（サンドバッグ、巻き藁、ウェイト器具、男女更衣室）と道順
+- [師範・指導員紹介](https://takezoux2.github.io/shukikai/instructor): 林正秀会長をはじめとする指導陣の経歴・指導方針
+- [支部一覧](https://takezoux2.github.io/shukikai/branch): 関東・関西・東北・九州の全道場・支部一覧
+- [よくあるご質問（Q&A）](https://takezoux2.github.io/shukikai/qa): 年齢制限、体力、黒帯取得、無料体験に関する回答
+- [会長挨拶](https://takezoux2.github.io/shukikai/message): 会長 林正秀からのメッセージと武道精神
+- [お問い合わせ](https://takezoux2.github.io/shukikai/contact): 体験・見学・入会のお問い合わせフォーム
+
+## 詳細情報
+より詳細なドキュメント・全支部の所在地・稽古時間・Q&A全文は [llms-full.txt](https://takezoux2.github.io/shukikai/llms-full.txt) をご参照ください。

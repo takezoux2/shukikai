@@ -1,24 +1,38 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
 import { getAssetPath } from "@/lib/basePath";
+import { getBreadcrumbJsonLd } from "@/lib/jsonLd";
 
 export const metadata: Metadata = {
-  title: "会長挨拶｜文京区 空手 空手道脩己会 総本部道場",
+  title: "会長挨拶",
   description:
-    "会長挨拶のページです。3歳からの礼儀作法、武道の心。空手道脩己会総本部道場。",
+    "空手道脩己会 会長 林正秀からのご挨拶。「武硯脩己（自己の可能性を引き出す道として）」「只管打拳」「良い習慣は才能を超える」を信条に、空手道を通じた人格形成と心身の鍛錬を導きます。",
   keywords: [
-    "文京区 空手",
-    "東京都 空手",
-    "文京区 キックボクシング",
-    "キッズ空手",
-    "脩己会",
-    "修己会",
-    "挨拶",
+    "林正秀",
+    "空手道 脩己会 会長",
+    "武硯脩己",
+    "只管打拳",
+    "空手道 理念",
+    "脩己会 挨拶",
   ],
+  alternates: {
+    canonical: "/message",
+  },
+  openGraph: {
+    title: "会長挨拶｜空手道脩己会 総本部道場",
+    description:
+      "「武硯脩己 自己の可能性を引き出す道として」。空手道脩己会 会長 林正秀からのメッセージ。",
+  },
 };
 
 export default function MessagePage() {
+  const breadcrumb = getBreadcrumbJsonLd([
+    { name: "会長挨拶", path: "/message" },
+  ]);
+
   return (
     <div className="sub message">
+      <JsonLd data={breadcrumb} />
       <div id="mv">
         <div className="gridContainer clearfix">
           <h2>会長挨拶</h2>

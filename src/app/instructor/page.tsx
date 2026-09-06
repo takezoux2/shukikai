@@ -1,21 +1,30 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
 import { getAssetPath } from "@/lib/basePath";
+import { getBreadcrumbJsonLd, getInstructorsJsonLd } from "@/lib/jsonLd";
 
 export const metadata: Metadata = {
-  title: "師範紹介｜文京区 空手 空手道脩己会 総本部道場",
+  title: "師範紹介",
   description:
-    "師範紹介のページです。総本部および各支部の師範・指導員をご紹介いたします。3歳からの礼儀作法、武道の心。空手道脩己会総本部道場。",
+    "空手道脩己会総本部および各支部の師範・指導員をご紹介。会長・首席師範の林正秀（七段）をはじめ、岩永強師範、石山昌憲師範、安田晃樹師範の略歴・段位・指導方針を掲載しています。",
   keywords: [
-    "文京区 空手",
-    "東京都 空手",
-    "文京区 キックボクシング",
-    "キッズ空手",
-    "脩己会",
-    "修己会",
-    "師範紹介",
-    "指導員",
     "林正秀",
+    "空手 師範",
+    "空手 指導員",
+    "文京区 空手 師範",
+    "脩己会 師範",
+    "岩永強",
+    "石山昌憲",
+    "安田晃樹",
   ],
+  alternates: {
+    canonical: "/instructor",
+  },
+  openGraph: {
+    title: "師範紹介｜空手道脩己会 総本部道場",
+    description:
+      "空手道脩己会の指導陣をご紹介。全日本選手権での実績と長年の指導経験を持つ師範陣が丁寧に指導いたします。",
+  },
 };
 
 interface Instructor {
@@ -79,8 +88,14 @@ const instructors: Instructor[] = [
 ];
 
 export default function InstructorPage() {
+  const breadcrumb = getBreadcrumbJsonLd([
+    { name: "師範紹介", path: "/instructor" },
+  ]);
+  const instructorSchemas = getInstructorsJsonLd();
+
   return (
     <div className="sub instructor">
+      <JsonLd data={[breadcrumb, ...instructorSchemas]} />
       <div id="mv">
         <div className="gridContainer clearfix">
           <h2>師範紹介</h2>

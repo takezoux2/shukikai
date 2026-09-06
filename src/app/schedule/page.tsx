@@ -1,24 +1,37 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
 import { getAssetPath } from "@/lib/basePath";
+import { getBreadcrumbJsonLd } from "@/lib/jsonLd";
 
 export const metadata: Metadata = {
-  title: "スケジュール ｜文京区 空手 空手道脩己会 総本部道場",
+  title: "スケジュール・稽古日時",
   description:
-    "スケジュールのページです。3歳からの礼儀作法、武道の心。空手道脩己会総本部道場。",
+    "空手道脩己会総本部道場の週間稽古スケジュール。幼年・入門クラス（水・土）、少年クラス（水・土）、幼少年クラス（月・金）、一般クラス（月・水・金・土）、健康空手クラス（月・水・金）。週何回でも参加可能。PDFダウンロード対応。",
   keywords: [
-    "文京区 空手",
-    "東京都 空手",
-    "文京区 キックボクシング",
-    "キッズ空手",
-    "脩己会",
-    "修己会",
-    "スケジュール",
+    "空手 スケジュール",
+    "空手 稽古時間",
+    "文京区 空手 時間割",
+    "子供空手 スケジュール",
+    "脩己会 稽古日",
   ],
+  alternates: {
+    canonical: "/schedule",
+  },
+  openGraph: {
+    title: "スケジュール・稽古日時｜空手道脩己会 総本部道場",
+    description:
+      "総本部道場の週間タイムスケジュール。すべてのクラスで見学・無料体験が可能です。",
+  },
 };
 
 export default function SchedulePage() {
+  const breadcrumb = getBreadcrumbJsonLd([
+    { name: "スケジュール", path: "/schedule" },
+  ]);
+
   return (
     <div className="sub sch">
+      <JsonLd data={breadcrumb} />
       <div id="mv">
         <div className="gridContainer clearfix">
           <h2>スケジュール</h2>

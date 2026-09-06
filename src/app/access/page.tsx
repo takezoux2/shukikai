@@ -1,24 +1,39 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
 import { getAssetPath } from "@/lib/basePath";
+import { getBreadcrumbJsonLd, getOrganizationJsonLd } from "@/lib/jsonLd";
 
 export const metadata: Metadata = {
-  title: "施設紹介・アクセス｜文京区 空手 空手道脩己会 総本部道場",
+  title: "施設紹介・アクセス",
   description:
-    "施設紹介・アクセスのページです。3歳からの礼儀作法、武道の心。空手道脩己会総本部道場。",
+    "空手道脩己会総本部道場（文京区本郷）の施設案内とアクセス方法。本郷三丁目駅徒歩3分、湯島駅徒歩5分。清潔感ある広々とした道場、男女更衣室、サンドバッグ3機、巻き藁、本格ウェイト器具完備。",
   keywords: [
-    "文京区 空手",
-    "東京都 空手",
-    "文京区 キックボクシング",
-    "キッズ空手",
-    "脩己会",
-    "修己会",
-    "アクセス",
+    "文京区 空手 アクセス",
+    "本郷三丁目 空手",
+    "湯島 空手",
+    "脩己会 アクセス",
+    "空手道場 設備",
+    "更衣室完備 空手",
   ],
+  alternates: {
+    canonical: "/access",
+  },
+  openGraph: {
+    title: "施設紹介・アクセス｜空手道脩己会 総本部道場",
+    description:
+      "本郷三丁目駅徒歩3分。男女更衣室、サンドバッグ、巻き藁、ウェイト器具完備の空手道場。施設写真と詳しいアクセス情報。",
+  },
 };
 
 export default function AccessPage() {
+  const breadcrumb = getBreadcrumbJsonLd([
+    { name: "施設紹介・アクセス", path: "/access" },
+  ]);
+  const orgSchema = getOrganizationJsonLd();
+
   return (
     <div className="sub access">
+      <JsonLd data={[breadcrumb, orgSchema]} />
       <div id="mv">
         <div className="gridContainer clearfix">
           <h2>施設紹介・アクセス</h2>
@@ -111,8 +126,11 @@ export default function AccessPage() {
             </dl>
             <dl>
               <dt>最寄駅</dt>
-              <dd>丸ノ内線・大江戸線「本郷三丁目駅」下車 徒歩3分<br />
-                千代田線「湯島駅」下車 徒歩5分</dd>
+              <dd>
+                丸ノ内線・大江戸線「本郷三丁目駅」下車 徒歩3分
+                <br />
+                千代田線「湯島駅」下車 徒歩5分
+              </dd>
             </dl>
           </div>
         </section>

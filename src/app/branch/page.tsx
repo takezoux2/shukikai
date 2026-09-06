@@ -1,18 +1,30 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { getBranchesJsonLd, getBreadcrumbJsonLd } from "@/lib/jsonLd";
 
 export const metadata: Metadata = {
-  title: "支部一覧｜文京区 空手 空手道脩己会 総本部道場",
+  title: "支部一覧",
   description:
-    "一覧のページです。3歳からの礼儀作法、武道の心。空手道脩己会総本部道場。",
+    "空手道脩己会の全国道場・支部一覧。関東地区（文京区総本部道場、東陽町道場、南千住道場、東雲空手教室）、関西地区（大阪本部寛武館、錬武館、硯武館）、東北地区（青森安田道場）、九州地区（鹿児島川内クラブ）の所在地・連絡先・稽古日程を掲載しています。",
   keywords: [
-    "文京区 空手",
-    "東京都 空手",
-    "文京区 キックボクシング",
-    "キッズ空手",
-    "脩己会",
-    "修己会",
-    "支部一覧",
+    "空手 支部",
+    "文京区 空手 本部道場",
+    "東陽町 空手",
+    "南千住 空手",
+    "東雲 空手",
+    "大阪 空手 寛武館",
+    "尼崎 空手 錬武館",
+    "八戸 空手 安田道場",
+    "脩己会 支部",
   ],
+  alternates: {
+    canonical: "/branch",
+  },
+  openGraph: {
+    title: "支部一覧｜空手道脩己会 総本部道場",
+    description:
+      "関東・関西・東北・九州に広がる空手道脩己会の全国道場・支部一覧。各拠点の所在地・電話番号・稽古日程。",
+  },
 };
 
 interface Branch {
@@ -164,6 +176,11 @@ function BranchBox({ branch }: { branch: Branch }) {
 }
 
 export default function BranchPage() {
+  const breadcrumb = getBreadcrumbJsonLd([
+    { name: "支部一覧", path: "/branch" },
+  ]);
+  const branchSchemas = getBranchesJsonLd();
+
   const kantoBranches = branches.filter((b) => b.region === "関東地区");
   const kantoMid = Math.ceil(kantoBranches.length / 2);
   const kantoLeft = kantoBranches.slice(0, kantoMid);
@@ -179,6 +196,7 @@ export default function BranchPage() {
 
   return (
     <div className="sub branch">
+      <JsonLd data={[breadcrumb, branchSchemas]} />
       <div id="mv">
         <div className="gridContainer clearfix">
           <h2>支部一覧</h2>

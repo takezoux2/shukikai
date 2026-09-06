@@ -1,23 +1,29 @@
 import type { Metadata } from "next";
+import JsonLd from "@/components/JsonLd";
+import { getBreadcrumbJsonLd } from "@/lib/jsonLd";
 
 export const metadata: Metadata = {
-  title: "プライバシーポリシー｜文京区 空手 空手道脩己会 総本部道場",
+  title: "プライバシーポリシー",
   description:
-    "プライバシーポリシーのページです。3歳からの礼儀作法、武道の心。空手道脩己会総本部道場。",
-  keywords: [
-    "文京区 空手",
-    "東京都 空手",
-    "文京区 キックボクシング",
-    "キッズ空手",
-    "脩己会",
-    "修己会",
-    "プライバシーポリシー",
-  ],
+    "空手道脩己会総本部道場のプライバシーポリシー（個人情報保護方針）。お客様の個人情報の適切な保護・管理、利用目的、法令遵守について定めています。",
+  alternates: {
+    canonical: "/privacy",
+  },
+  openGraph: {
+    title: "プライバシーポリシー｜空手道脩己会 総本部道場",
+    description:
+      "空手道脩己会総本部道場の個人情報保護方針について掲載しています。",
+  },
 };
 
 export default function PrivacyPage() {
+  const breadcrumb = getBreadcrumbJsonLd([
+    { name: "プライバシーポリシー", path: "/privacy" },
+  ]);
+
   return (
     <div className="sub pvp">
+      <JsonLd data={breadcrumb} />
       <div id="mv">
         <div className="gridContainer clearfix">
           <h2>プライバシーポリシー</h2>
