@@ -61,6 +61,18 @@ describe("All Subpages", () => {
     expect(
       screen.getByRole("heading", { name: "支部一覧" }),
     ).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /総本部道場/ }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /大阪本部/ }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /青森支部/ }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: /鹿児島川内クラブ/ }),
+    ).toBeInTheDocument();
   });
 
   it("renders QaPage", () => {

@@ -91,9 +91,7 @@ export default function InstructorPage() {
         <section className="instructor_list">
           <div className="gridContainer">
             <div className="instructor_intro_text txtC mb40">
-              <p className="bold larger">
-                空手道 脩己會の指導陣
-              </p>
+              <p className="bold larger">空手道 脩己會の指導陣</p>
               <p className="mt10" style={{ color: "#666", lineHeight: "1.8" }}>
                 心技体を磨き、礼節を重んじる指導を徹底しております。
                 <br />
@@ -131,8 +129,8 @@ export default function InstructorPage() {
                       </h3>
                       <div className="instructor_bio">
                         <h4>【略歴・指導方針】</h4>
-                        {instructor.bio.map((paragraph, pIdx) => (
-                          <p key={pIdx}>{paragraph}</p>
+                        {instructor.bio.map((paragraph) => (
+                          <p key={paragraph}>{paragraph}</p>
                         ))}
                       </div>
                     </div>
