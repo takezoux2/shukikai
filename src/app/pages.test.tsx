@@ -5,6 +5,7 @@ import BranchPage from "./branch/page";
 import ClassPage from "./class/page";
 import ContactPage from "./contact/page";
 import InfoPage from "./info/page";
+import InstructorPage from "./instructor/page";
 import MessagePage from "./message/page";
 import PrivacyPage from "./privacy/page";
 import QaPage from "./qa/page";
@@ -16,6 +17,15 @@ describe("All Subpages", () => {
     expect(
       screen.getByRole("heading", { name: "会長挨拶" }),
     ).toBeInTheDocument();
+  });
+
+  it("renders InstructorPage", () => {
+    render(<InstructorPage />);
+    expect(
+      screen.getByRole("heading", { name: "師範紹介" }),
+    ).toBeInTheDocument();
+    expect(screen.getByText("林 正秀")).toBeInTheDocument();
+    expect(screen.getByText("岩永 強")).toBeInTheDocument();
   });
 
   it("renders ClassPage", () => {

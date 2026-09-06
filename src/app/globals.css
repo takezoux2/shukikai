@@ -235,9 +235,6 @@ td {
 .img80 {
   width: 80% !important;
 }
-.yoga {
-  color: red;
-}
 
 section {
   padding: 65px 0px;
@@ -288,6 +285,9 @@ section {
 .sub.sch #content {
   background: url(/shukikai/img/pc/schedule_bg.png) no-repeat top center;
 }
+.sub.instructor #content {
+  background: url(/shukikai/img/pc/contet_bg.png) no-repeat top center;
+}
 .sub.pvp #content {
   background: none;
 }
@@ -297,6 +297,118 @@ section {
 }
 .sub.pvp #content section:first-child .gridContainer {
   margin-top: 0px;
+}
+
+/* 師範紹介 Subpage Base */
+.sub.instructor .instructor_intro_text {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.sub.instructor .instructor_container {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  margin-top: 30px;
+}
+.sub.instructor .instructor_item {
+  display: flex;
+  background: #ffffff;
+  border: 1px solid #dbe3eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(12, 74, 175, 0.06);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.sub.instructor .instructor_item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(12, 74, 175, 0.12);
+}
+.sub.instructor .instructor_item.layout_normal {
+  flex-direction: row;
+}
+.sub.instructor .instructor_item.layout_reverse {
+  flex-direction: row-reverse;
+}
+.sub.instructor .instructor_thumbnail_wrap {
+  flex: 0 0 280px;
+  max-width: 280px;
+  background: #f4f7fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.sub.instructor .thumbnail_inner {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  border: 2px solid #ffffff;
+}
+.sub.instructor .instructor_thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.sub.instructor .instructor_info {
+  flex: 1;
+  padding: 30px 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sub.instructor .instructor_title {
+  font-size: 88%;
+  font-weight: bold;
+  color: #0c4aaf;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.04em;
+}
+.sub.instructor .instructor_name {
+  font-size: 165%;
+  font-weight: bold;
+  color: #222222;
+  margin: 0 0 16px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  border-bottom: 2px solid #0c4aaf;
+  padding-bottom: 10px;
+}
+.sub.instructor .instructor_name ruby {
+  font-size: 100%;
+}
+.sub.instructor .instructor_name rt {
+  font-size: 45%;
+  color: #777777;
+  font-weight: normal;
+}
+.sub.instructor .shihan_label {
+  font-size: 55%;
+  background: #0c4aaf;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: normal;
+  vertical-align: middle;
+  letter-spacing: 0.05em;
+}
+.sub.instructor .instructor_bio h4 {
+  font-size: 92%;
+  color: #4b4b4b;
+  margin: 0 0 8px 0;
+  font-weight: bold;
+}
+.sub.instructor .instructor_bio p {
+  font-size: 92%;
+  line-height: 1.85;
+  color: #4b4b4b;
+  margin: 0 0 8px 0;
+}
+.sub.instructor .instructor_bio p:last-child {
+  margin-bottom: 0;
 }
 
 /* Footer Base */
@@ -381,24 +493,17 @@ p {
 }
 
 /* クラス紹介 */
-section#standard,
-section#yoga {
+section#standard {
   background: #f1f8ff;
   padding: 50px 0 85px 0;
 }
-section#standard img,
-section#ladies img {
+section#standard img {
   margin: 45px 0 135px 0;
 }
-section#yoga img {
-  margin: 45px auto 135px auto;
-}
-section#standard h2.class_title,
-section#ladies h2.class_title {
+section#standard h2.class_title {
   margin-bottom: 30px;
 }
-.class section#standard p.button,
-.class section#ladies p.button {
+.class section#standard p.button {
   margin-top: 50px;
 }
 h2.class_title {
@@ -874,8 +979,7 @@ td.select_area select {
   section#kids {
     padding-top: 0;
   }
-  section#standard img,
-  section#ladies img {
+  section#standard img {
     margin: 45px 0 60px 0;
   }
 
@@ -1014,6 +1118,36 @@ td.select_area select {
   .footerTop img {
     width: 45px;
   }
+  /* 師範紹介 Mobile */
+  .sub.instructor .instructor_intro_text {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+  .sub.instructor .instructor_container {
+    gap: 30px;
+    margin-top: 20px;
+  }
+  .sub.instructor .instructor_item,
+  .sub.instructor .instructor_item.layout_normal,
+  .sub.instructor .instructor_item.layout_reverse {
+    flex-direction: column !important;
+  }
+  .sub.instructor .instructor_thumbnail_wrap {
+    flex: none;
+    max-width: 100%;
+    padding: 20px 20px 10px 20px;
+  }
+  .sub.instructor .thumbnail_inner {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+  .sub.instructor .instructor_info {
+    padding: 15px 18px 22px 18px;
+  }
+  .sub.instructor .instructor_name {
+    font-size: 135%;
+  }
+
   footer .button_area {
     text-align: center;
     margin: 40px auto;
@@ -1315,6 +1449,11 @@ td.select_area select {
     width: 320px;
   }
 
+  /* 師範紹介 Desktop */
+  .instructor #content .gridContainer {
+    width: 760px;
+  }
+
   /* お問い合わせ Desktop */
   .contact #content .gridContainer {
     width: 760px;
@@ -1331,12 +1470,13 @@ td.select_area select {
     right: 55px;
     z-index: 99;
   }
+  .footer_class ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
   .footer_class li {
     width: 218px;
-    float: left;
-    margin-right: 25px;
-  }
-  .footer_class li:last-child {
     margin-right: 0;
   }
   .footer_content .fL {

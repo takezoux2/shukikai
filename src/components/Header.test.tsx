@@ -10,6 +10,7 @@ describe("Header", () => {
       1,
     );
     expect(screen.getAllByText("会長挨拶").length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText("師範紹介").length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText("クラス紹介").length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText("入会案内").length).toBeGreaterThanOrEqual(1);
     expect(

@@ -54,25 +54,6 @@ export default function Footer() {
                 </p>
               </Link>
             </li>
-            <li>
-              <Link href="/class#ladies">
-                <RolloverImage
-                  src="/img/pc/class_3_off.png"
-                  alt="レディスキッククラス"
-                />
-                <p>
-                  <span>レディスキッククラス</span>
-                </p>
-              </Link>
-            </li>
-            <li>
-              <Link href="/class#yoga">
-                <RolloverImage src="/img/pc/class_4_off.png" alt="ヨガクラス" />
-                <p>
-                  <span>ヨガクラス</span>
-                </p>
-              </Link>
-            </li>
           </ul>
         </div>
       </div>
@@ -105,25 +86,6 @@ export default function Footer() {
                     className="img80"
                   />
                 </a>
-                <br />
-                <a
-                  href="http://s.ameblo.jp/bunkyo-yoga/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <RolloverImage
-                    src="/img/pc/footer_yogablog_off.png"
-                    alt="ヨガブログ"
-                    className="img80 desktop_only"
-                    style={{ marginTop: 15 }}
-                  />
-                  <RolloverImage
-                    src="/img/pc/footer_yogablog_off.png"
-                    alt="ヨガブログ"
-                    className="img80 mobile_only"
-                    style={{ display: "block", margin: "0 auto 20px auto" }}
-                  />
-                </a>
               </div>
               <div className="fR">
                 <a
@@ -148,6 +110,9 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link href="/message">会長挨拶</Link>
+                </li>
+                <li>
+                  <Link href="/instructor">師範紹介</Link>
                 </li>
                 <li>
                   <Link href="/class">クラス紹介</Link>
@@ -214,6 +179,9 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/message">会長挨拶</Link>
+            </li>
+            <li>
+              <Link href="/instructor">師範紹介</Link>
             </li>
             <li>
               <Link href="/class">クラス紹介</Link>

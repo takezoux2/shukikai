@@ -37,12 +37,6 @@ export default function ClassPage() {
                 <li>
                   <a href="#standard">一般クラス</a>
                 </li>
-                <li>
-                  <a href="#ladies">レディスキッククラス</a>
-                </li>
-                <li>
-                  <a href="#yoga">ヨガクラス</a>
-                </li>
               </ul>
             </div>
           </div>
@@ -178,70 +172,6 @@ export default function ClassPage() {
 
             <p className="button">
               <Link href="/schedule">スケジュール &gt;</Link>
-            </p>
-          </div>
-        </section>
-
-        <section id="ladies" className="class_2">
-          <div className="gridContainer">
-            <h2 className="class_title">レディスキッククラス</h2>
-            <img
-              src={getAssetPath("/img/pc/class_photo03.png")}
-              alt="レディスキッククラス"
-            />
-
-            <h3>パンチ キック でストレス発散！</h3>
-            <p>
-              レディスキッククラスでは、パンチ・キック、護身術など、空手の簡単な動きを取り入れながら、健康的な体力作りを目指す女性専用のクラスです。
-            </p>
-            <p>
-              女性だけのクラスなので、人目を気にせずストレスも発散でき、また実用的な護身術も学べます。
-            </p>
-            <br />
-            <p>
-              総本部道場では、全クラスにおいて経験豊富な指導員が各個人のレベルを見極め、最適な指導を心掛けておりますので、どなたでもいつからでも始められます。また随時、
-              <Link href="/contact">見学・無料体験</Link>を行っておりますので、
-            </p>
-            <p>お気軽にお問い合わせください。</p>
-
-            <p className="button">
-              <Link href="/schedule">スケジュール &gt;</Link>
-            </p>
-          </div>
-        </section>
-
-        <section id="yoga" className="class_4">
-          <div className="gridContainer">
-            <h2 className="class_title">ヨガクラス（中学生以上）</h2>
-            <div className="txtC">
-              <img
-                src={getAssetPath("/img/pc/class_photo04.png")}
-                alt="ヨガクラス"
-              />
-            </div>
-
-            <h3>体質改善・ボディメイク・リラックス効果</h3>
-            <p>
-              ヨガとは、「精神と身体を、最も安定した状態に近づける方法」としてインドで発祥しました。
-            </p>
-            <p>
-              現在のヨガは、柔軟体操､健康法､ダイエット、様々な問題を抱える現代社会にあわせたストレス解消法など様々な目的で行われていますが、それらは本来のヨガの目的の一部に過ぎません。
-            </p>
-            <p>
-              様々のスタイルのヨガが存在しますが、当施設では経験豊富な講師によって「ハタヨガ」「陰ヨガ」「グンダリ―ニヨガ」まで幅広く学べます。
-            </p>
-            <p>
-              身体にもココロもブレない軸を作り、バランスよくしなやかで力強さを作っていきませんか？
-            </p>
-
-            <p className="button size02">
-              <a
-                href="http://bunkyo-yoga.on.omisenomikata.jp/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                ヨガクラスホームページ &gt;
-              </a>
             </p>
           </div>
         </section>

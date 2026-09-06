@@ -98,6 +98,11 @@ export default function Header() {
                     </Link>
                   </li>
                   <li>
+                    <Link href="/instructor" onClick={closeMenu}>
+                      師範紹介
+                    </Link>
+                  </li>
+                  <li>
                     <Link href="/class" onClick={closeMenu}>
                       クラス紹介
                     </Link>
@@ -158,6 +163,14 @@ export default function Header() {
                 className={isActive("/message") ? "active" : ""}
               >
                 会長挨拶
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/instructor"
+                className={isActive("/instructor") ? "active" : ""}
+              >
+                師範紹介
               </Link>
             </li>
             <li>

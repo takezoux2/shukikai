@@ -368,27 +368,6 @@ export default function ContactForm() {
                   />
                   一般クラス
                 </label>
-                <br />
-                <label>
-                  <input
-                    type="radio"
-                    name="targetClass"
-                    value="レディスキック"
-                    checked={formData.targetClass === "レディスキック"}
-                    onChange={handleChange}
-                  />
-                  レディスキック
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="targetClass"
-                    value="ヨガ"
-                    checked={formData.targetClass === "ヨガ"}
-                    onChange={handleChange}
-                  />
-                  ヨガ
-                </label>
                 <label>
                   <input
                     type="radio"

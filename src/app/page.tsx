@@ -62,17 +62,6 @@ export default function HomePage() {
                     alt="YMCA道場 ブログ"
                   />
                 </a>
-                <br />
-                <a
-                  href="http://ameblo.jp/bunkyo-yoga/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <RolloverImage
-                    src="/img/pc/yogablog_off.png"
-                    alt="ヨガ ブログ"
-                  />
-                </a>
               </div>
               <div className="button_area mobile_only">
                 <a
@@ -102,17 +91,6 @@ export default function HomePage() {
                   <img
                     src={getAssetPath("/img/sp/blog2.png")}
                     alt="YMCA道場 ブログ"
-                  />
-                </a>
-                <br />
-                <a
-                  href="http://ameblo.jp/bunkyo-yoga/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={getAssetPath("/img/sp/blog3.png")}
-                    alt="ヨガ ブログ"
                   />
                 </a>
               </div>

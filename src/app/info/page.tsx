@@ -64,30 +64,6 @@ export default function InfoPage() {
                   <td className="txtC">13,000円</td>
                   <td>一般クラス</td>
                 </tr>
-                <tr>
-                  <td>レディスキック会員</td>
-                  <td>中学生以上の女性</td>
-                  <td className="txtC">11,000円</td>
-                  <td className="txtC">
-                    7,000円/4回
-                    <br />
-                    11,000円/7回
-                  </td>
-                  <td className="txtC">ー</td>
-                  <td>レディスキッククラス</td>
-                </tr>
-                <tr>
-                  <td>ヨガ会員</td>
-                  <td>中学生以上</td>
-                  <td className="txtC">11,000円</td>
-                  <td className="txtC">
-                    11,000円/4回
-                    <br />
-                    20,000円/8回
-                  </td>
-                  <td className="txtC">ー</td>
-                  <td>ヨガクラス</td>
-                </tr>
               </tbody>
             </table>
 
@@ -124,40 +100,7 @@ export default function InfoPage() {
                 <br />
                 一般クラス
               </p>
-
-              <h4>レディスキック会員</h4>
-              <p>対象　：中学生以上の女性</p>
-              <p>入会金：11,000円</p>
-              <p>
-                チケット制：7,000円/4回
-                <br />
-                11,000円/7回
-              </p>
-              <p>空手衣：ー</p>
-              <p>
-                参加可能クラス
-                <br />
-                レディスキッククラス
-              </p>
-
-              <h4>ヨガ会員</h4>
-              <p>対象　：中学生以上の女性</p>
-              <p>入会金：11,000円</p>
-              <p>
-                チケット制：11,000円/4回
-                <br />
-                20,000円/8回
-              </p>
-              <p>空手衣：ー</p>
-              <p>
-                参加可能クラス
-                <br />
-                ヨガクラス
-              </p>
             </div>
-            <p className="small">
-              ※レディースキック会員及びヨガ会員は月会費ではなく、チケット制になります。
-            </p>
           </div>
         </section>
 
@@ -209,13 +152,7 @@ export default function InfoPage() {
                 </dl>
                 <dl>
                   <dt>6</dt>
-                  <dd>
-                    空手道衣代のお支払い：11,000〜13,000円
-                    <br />
-                    <span className="small">
-                      ※レディスキック会員は必要ありません
-                    </span>
-                  </dd>
+                  <dd>空手道衣代のお支払い：11,000〜13,000円</dd>
                 </dl>
               </div>
             </div>
